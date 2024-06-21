@@ -1,6 +1,7 @@
 # Tic Tac Toe console game
 
 Welcome to the Tic Tac Toe game! This game allows you to play the classic Tic Tac Toe game with a customizable grid size.
+
 The default grid size is 3x3, but you can play on a larger grid if you prefer.
 
 ## How to Play
