@@ -6,12 +6,8 @@ class TicTacToe:
         self.steps = 0
 
     def basic_structure(self):
-        shapes_lst = [[' '] * self.grid_size for i in range(self.grid_size)]
-        for i in range(self.grid_size):
-            shapes_lst[i]= ["|"] * (self.grid_size-1)
-        for i, lst in enumerate(shapes_lst):
-            for j in range(0,len(lst)+self.grid_size,2):
-                lst.insert(j," ")
+        n = (self.grid_size *2) -1
+        shapes_lst = [['|' if j%2!=0 else ' ' for j in range(n)] for _ in range(self.grid_size)]
         return shapes_lst
     
     
@@ -109,7 +105,7 @@ if __name__ == "__main__":
     while grid_size<3:
         print("Please enter grid_size from 3 and above. Thanks.")
         grid_size = int(input("Enter grid size: "))
-        
+
     tic = TicTacToe(grid_size)
     lst_shapes = tic.basic_structure()
     win_tie_lst = tic.win_tie()
@@ -128,4 +124,4 @@ if __name__ == "__main__":
         check  = tic.check_win_tie(win_tie_lst)
         if check:
             break
-      
+        
